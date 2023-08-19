@@ -41,10 +41,10 @@ function last_combo(order) {
 display(last_combo(123));
 
 function other_combos(order) {
-    return order / 10;
+    return math_floor(order / 10);
 }
 
-display(other_combos(123));
+display(other_combos(312));
 
 
 
