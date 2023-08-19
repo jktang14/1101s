@@ -22,14 +22,29 @@ function combo_price(combo) {
 
 display(combo_price(5));
 
+function empty_order() {
+    return 0;
+}
 
+display(empty_order());
 
+function add_to_order(order, combo) {
+    return parse_int(stringify(order) + stringify(combo), 10);
+}
 
+display(add_to_order(12, 14));
 
+function last_combo(order) {
+    return order % 10;
+}
 
+display(last_combo(123));
 
+function other_combos(order) {
+    return order / 10;
+}
 
-
+display(other_combos(123));
 
 
 
