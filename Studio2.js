@@ -3,7 +3,7 @@ function biggie_size(combo) {
     ? 5 
     :combo === 2 
     ? 6 
-    :combo === 3 
+    :combo === 3
     ? 7 
     : 8;
 }
