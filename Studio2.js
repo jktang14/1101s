@@ -30,8 +30,9 @@ display(empty_order());
 
 function add_to_order(order, combo) {
     //return parse_int(stringify(order) + stringify(combo), 10);
-    const combo_length = math_ceil(math_log10(combo + 1));
-    return math_pow(10, combo_length) * order + combo;
+    /*const combo_length = math_ceil(math_log10(combo + 1));
+    return math_pow(10, combo_length) * order + combo;*/
+    return order * 10 + combo;
 }
 
 display(add_to_order(12, 1432));
