@@ -5,3 +5,5 @@ still needs to be multiplied by n, there is a deferred operation */
 // q3
 // 6 steps
 
+//q4
+//3 deferred operations
