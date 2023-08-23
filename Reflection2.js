@@ -23,3 +23,18 @@ return product
 q6 
 No deferred operations
 
+q7
+Recursive
+
+q8
+fib_iter(1, 0, 5)
+fib_iter(1, 1, 4)
+fib_iter(2, 1, 3)
+fib_iter(3, 2, 2)
+fib_iter(5, 3, 1)
+fib_iter(8, 5, 0)
+evaluate b
+6 steps
+
+q9
+No deferred operations
