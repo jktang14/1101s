@@ -21,10 +21,11 @@ return product
 5 steps
 
 q6 
-No deferred operations
+Constant space, No deferred operations
 
 q7
 Recursive
+Time less than 2^n, not a complete binary tree
 
 q8
 fib_iter(1, 0, 5)
