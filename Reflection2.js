@@ -35,7 +35,7 @@ fib_iter(3, 2, 2)
 fib_iter(5, 3, 1)
 fib_iter(8, 5, 0)
 evaluate b
-6 steps
+6 steps (n + 1 steps)
 
 q9
-No deferred operations
+No deferred operations, constant space
