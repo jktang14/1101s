@@ -9,7 +9,7 @@ q3
 6 steps
 
 q4
-6 deferred operations
+4 deferred operations
 
 q5
 iter(1, 1, 5)
