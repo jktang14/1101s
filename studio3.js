@@ -22,3 +22,10 @@ function moony(n) {
 }
 
 show(moony(5));
+
+/* Recursive process
+
+O(n), 
+
+
+
