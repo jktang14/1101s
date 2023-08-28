@@ -25,7 +25,8 @@ show(moony(5));
 
 /* Recursive process
 
-O(n), 
+O(n), treat it like 2 deferred processes 
+(stack_frac and beside_frac), everytime n increases, changes by 2, essentially 2n
 
 
 
