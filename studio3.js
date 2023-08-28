@@ -1,10 +1,19 @@
-function factorial(n) {
-    return iter(1, n);
+import {circle, square, ribbon, blank, stack, beside, show, 
+stack_frac} from "rune";
+
+function moony_1(bottom_right) {
+    return stack(beside(circle, blank), beside(square, bottom_right));
 }
 
-function iter(product, n) {
-    return n === 0 ? product : iter(product * n, n - 1);
+show(moony_1(ribbon));
+
+function moony_2(n) {
+    return n === 1
+    ? circle
+    : moony_1(moony_2(n - 1));
 }
+show(moony_2(5));
 
-
-factorial(5);
+function moony(n) {
+    
+}
