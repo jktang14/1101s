@@ -15,5 +15,9 @@ function moony_2(n) {
 show(moony_2(5));
 
 function moony(n) {
-    
+    return n === 1
+    ? circle
+    : stack_frac(1/n, beside(heart, blank), beside(square, moony(n - 1)));
 }
+
+show(moony(3));
