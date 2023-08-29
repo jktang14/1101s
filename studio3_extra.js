@@ -8,8 +8,9 @@ Space: Θ(n) as n increases
 */
 
 function fast_expt(b, n) {
-    return n === 1
-    ? b
+    return n === 0
+    ? 1
     : n % 2 === 0
-    ? math_pow(fast_expt(b, n / 2), 
+    ? fast_expt(b * b, n / 2)
+    : b * fast_expt(b, n - 1);
 }
