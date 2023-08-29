@@ -22,10 +22,15 @@ function fast_expt(b, n) {
 fast_expt(3, 2);
 
 function iter_fast_expt(b, n) {
-    
+    return iter(n, b, b);
 }
 
-function iter(expt, base, )
+function iter(expt, b, counter) {
+    return expt === 0
+    ? 1
+    : expt % 2 === 0
+    ? iter(expt / 2, b, counter * counter)
+}
 
 
 
