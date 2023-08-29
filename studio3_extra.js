@@ -11,5 +11,5 @@ function fast_expt(b, n) {
     return n === 1
     ? b
     : n % 2 === 0
-    ? 
+    ? math_pow(fast_expt(b, n / 2), 
 }
