@@ -7,10 +7,16 @@ Space: Θ(n) as n increases
 
 */
 
+function square() {
+    return a * a;
+}
+
 function fast_expt(b, n) {
     return n === 0
     ? 1
     : n % 2 === 0
-    ? fast_expt(b * b, n / 2)
+    ? square(fast_expt(b * b, n / 2))
     : b * fast_expt(b, n - 1);
 }
+
+fast_expt(3, 4);
