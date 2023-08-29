@@ -19,4 +19,13 @@ function fast_expt(b, n) {
     : b * fast_expt(b, n - 1);
 }
 
-fast_expt(3, 4);
+fast_expt(3, 2);
+
+function iter_fast_expt(b, n) {
+    
+}
+
+function iter(expt, base, )
+
+
+
