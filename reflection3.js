@@ -31,6 +31,7 @@ display(my_sum(3));
 
 display("q5");
 function sum_alt(term, a, next, b) {
+    // can remove term, next, b since they do not change
     function iter(term, a, next, b, answer) {
         return a > b
             ? answer
