@@ -31,13 +31,12 @@ display(my_sum(3));
 
 display("q5");
 function sum_alt(term, a, next, b) {
+    function iter(term, a, next, b, answer) {
+        return a > b
+            ? answer
+            : iter(term, next(a), next, b, answer + term(a));
+    }
     return iter(term, a, next, b, 0);
-}
-
-function iter(term, a, next, b, answer) {
-    return a > b
-    ? answer
-    : iter(term, next(a), next, b, answer + term(a));
 }
 
 display(sum(x => x, 1, x => x + 2, 4));
