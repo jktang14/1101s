@@ -27,9 +27,9 @@ display(thrice(math_sqrt)(256));
 
 /*q4
 a: 33
-b: compose function repeated 27 times
+b: compose function
 c: 1
-d: square repeated 27 times, 2 passed into it
+d: square repeated 27 times, 2 passed into it 2^(2^27)
 
 
 
