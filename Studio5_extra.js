@@ -24,7 +24,3 @@ function sums(lst) {
 }
 
 sums(list(1, 2, 3, 4, 5));
-
-
-display(length(pair(2, null)));
-
