@@ -1,5 +1,5 @@
 function every_second(items) {
-    if (length(items) === 0 || length(items) === 1){
+    if (is_null(items) || length(items) === 1){
         return null;
     }
     else {
