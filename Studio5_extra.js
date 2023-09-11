@@ -18,24 +18,13 @@ function sums(lst) {
             return head(lst) + sum(tail(lst));
         }
     }
-    function every_first(lst) {
-        if (is_null(lst)){
-            return null;
-        }
-        else if (length(lst) === 1) {
-            return pair(list_ref(lst, 0), null);
-        }
-        else {
-            return pair(list_ref(lst, 0), every_first(tail(tail(lst))));
-        }
-    }
     const odd_sum = sum(every_second(lst));
-    const even_sum = sum(every_first(lst));
+    const even_sum = sum(every_second(pair(0, lst)));
     return list(even_sum, odd_sum);
 }
 
 sums(list(1, 2, 3, 4, 5));
 
 
-display(length())
+display(length(pair(2, null)));
 
