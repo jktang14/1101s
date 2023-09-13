@@ -23,6 +23,19 @@ function tree_sum(tree) {
 const my_tree = list(1, list(2, list(3, 4), 5), list(6, 7));
 tree_sum(my_tree);
 
+// q3
 function accumulate_tree(f, op, initial, tree) {
-    return accumulate()
+    return accumulate((x, y) => op(f(x), y), initial, tree);
 }
+
+function count_data_items(tree) {
+    return accumulate_tree(x => 1, (x, y) => x + y, 0 , tree);
+}
+const treeC = list(list(1, 2), null, 3, list(4, null));
+count_data_items(treeC);
+
+function tree_sum2(tree) {
+    return accumulate_tree(x => x, (x, y) => x + y, 0 , tree);
+}
+
+//tree_sum2(my_tree);
