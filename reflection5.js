@@ -32,7 +32,13 @@ function count_data_items(tree) {
     return accumulate_tree(x => 1, (x, y) => x + y, 0 , tree);
 }
 const treeC = list(list(1, 2), null, 3, list(4, null));
-count_data_items(treeC);
+display(count_data_items(treeC));
+
+function flatten(tree) {
+    return accumulate_tree(x => list(x), append, null , tree);
+}
+
+display(flatten(LoL));
 
 function tree_sum2(tree) {
     return accumulate_tree(x => x, (x, y) => x + y, 0 , tree);
