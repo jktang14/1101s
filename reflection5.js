@@ -26,7 +26,7 @@ tree_sum(my_tree);
 // q3
 function accumulate_tree(f, op, initial, tree) {
     // Have to check for both cases, same as q2, where head is either a tree or a number
-    return accumulate((curr, wish) => is_number(curr) ? op(f(curr), wish) : op(accumulate_tree(f, op, initial, curr)),
+    return accumulate((curr, wish) => is_number(curr) ? op(f(curr), wish) : op(accumulate_tree(f, op, initial, curr), wish),
     initial, tree);
 }
 
