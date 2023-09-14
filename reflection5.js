@@ -25,7 +25,9 @@ tree_sum(my_tree);
 
 // q3
 function accumulate_tree(f, op, initial, tree) {
-    return accumulate((x, y) => op(f(x), y), initial, tree);
+    // Have to check for both cases, same as q2, where head is either a tree or a number
+    return accumulate((curr, wish) => is_number(curr) ? op(f(curr), wish) : op(accumulate_tree(f, op, init, curr)),
+    initial, tree);
 }
 
 function count_data_items(tree) {
