@@ -9,8 +9,7 @@ function my_map(f, xs) {
 function remove_duplicates(xs) {
     return is_null(xs)
     ? null
-    : 
-    append(list(head(xs)), filter(x => x !== head(xs), remove_duplicates(tail(xs))));
+    : append(list(head(xs)), filter(x => x !== head(xs), remove_duplicates(tail(xs))));
 }
 
 display(remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2)));
@@ -18,3 +17,5 @@ display(remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2)));
 
 display(remove_duplicates(list("a", "x", "b", "c", "c", "b", "d")));
 // Result: list("a", "x", "b", "c", "d")
+
+// q3
