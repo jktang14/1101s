@@ -19,7 +19,7 @@ function subsets(xs) {
     }
 }
 
-subsets(list(1, 2, 3));
+subsets(list(1, 2, 3, 4));
 // Result: list(list(),
 // list(1), list(2), list(3),
 // list(1,2), list(1,3), list(2,3),
