@@ -12,10 +12,10 @@ function remove_duplicates(xs) {
     : append(list(head(xs)), filter(x => x !== head(xs), remove_duplicates(tail(xs))));
 }
 
-//display(remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2)));
+display(remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2)));
 // Result: list(1, 2, 3, 4)
 
-//display(remove_duplicates(list("a", "x", "b", "c", "c", "b", "d")));
+display(remove_duplicates(list("a", "x", "b", "c", "c", "b", "d")));
 // Result: list("a", "x", "b", "c", "d")
 
 // q3
@@ -32,14 +32,14 @@ function makeup_amount(x, coins) {
         const combi_A = makeup_amount(x, tail(coins));
         // Combinations that do not use the head coin
         // for the remaining amount.
-        const combi_B = ...
+        //const combi_B = ...
         // Combinations that use the head coin.
         const combi_C = makeup_amount(x - head(coins), tail(coins));
         return append(combi_A, combi_C);
     }
 }
 
-makeup_amount(22, list(1, 10, 5, 20, 1, 5, 1, 50));
+//makeup_amount(22, list(1, 10, 5, 20, 1, 5, 1, 50));
 // Result: list(list(20, 1, 1), list(10, 5, 1, 5, 1), list(1, 20, 1),
 // list(1, 20, 1), list(1, 10, 5, 5, 1),
 // list(1, 10, 5, 1, 5))
