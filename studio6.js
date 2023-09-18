@@ -13,5 +13,8 @@ function remove_duplicates(xs) {
     append(list(head(xs)), filter(x => x !== head(xs), remove_duplicates(tail(xs))));
 }
 
-remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2));
+display(remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2)));
 // Result: list(1, 2, 3, 4)
+
+display(remove_duplicates(list("a", "x", "b", "c", "c", "b", "d")));
+// Result: list("a", "x", "b", "c", "d")
