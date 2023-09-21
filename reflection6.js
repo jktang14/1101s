@@ -8,6 +8,11 @@ function insert_cmp(x, xs, cmp) {
            : pair(head(xs), insert_cmp(x, tail(xs), cmp));
 }
 
+//insert_cmp
+// Worst case is O(n^2)
+// Best case is omega(n), when list is already sorted
+// theta is when both O and omega is the same
+
 function insertion_sort_cmp(xs, cmp) {
     return is_null(xs) 
            ? xs
