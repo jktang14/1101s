@@ -87,6 +87,8 @@ function merge_sort(xs) {
 // Test
 merge_sort(list(7, 6, 3, 8, 4, 6, 5, 9, 8, 3, 1, 5, 2));
 
+// a) O(n^2)
+// b) O(n^2)
 
 
 
