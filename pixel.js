@@ -14,7 +14,7 @@ function count_grantable_wishes(wishlist, skill_level) {
     }
 }
 
-const wishlist = list(pair("b", 2), pair("c", 3), pair("a", 1));
+const wishlist = list(pair("b", 4), pair("c", 2), pair("a", 1));
 count_grantable_wishes(wishlist, 2);
 
 function biggest_grantable_wish(wishlist, skill_level) {
@@ -33,7 +33,9 @@ function biggest_grantable_wish(wishlist, skill_level) {
             }
         }
         else {
-            
+            return next_biggest;
         }
     }
 }
+
+biggest_grantable_wish(wishlist, 2);
