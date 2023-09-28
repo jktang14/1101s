@@ -114,15 +114,24 @@ function maximise_happiness(wishlist, limit) {
 }
 
 function maximise_happiness(wishlist, limit) {
+    function calculate_difficulty(lst) {
+        return accumulate((x, y) => tail(x) + y, 0, lst);
+    }
     if (is_null(wishlist)) {
+        return null;
+    }
+    else if (limit === 0) {
         return null;
     }
     else {
         const head_score = tail(head(wishlist));
         // case 1: Head is included
         const list_with_head = maximise_happiness(wishlist, limit - head_score);
+        const head_happiness = sum_happiness(list_with_head);
         // case 2: Head not included
-        const list_without_head = maximise_happiness(tail(wishlist), limit)
+        const list_without_head = maximise_happiness(tail(wishlist), limit);
+        const no_head_happiness = sum_happiness(list_without_head);
+        return head_happiness > no_head_happiness ? list_with_head : list_without_head;
     }
 }
 
