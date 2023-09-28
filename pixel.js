@@ -71,7 +71,9 @@ function sum_happiness(wishlist) {
 }
 
 // Level 4b
-function maximise_happiness()
+function maximise_happiness(wishlist, limit) {
+    
+}
 
 
 
