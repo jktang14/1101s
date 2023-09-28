@@ -14,7 +14,7 @@ function count_grantable_wishes(wishlist, skill_level) {
     }
 }
 
-const wishlist = list(pair("a", 1), pair("b", 2), pair("c", 3), pair("d", 4));
+const wishlist = list(pair("c", 3), pair("b", 2), pair("a", 1), pair("d", 4));
 count_grantable_wishes(wishlist, 2);
 // Level 2
 function biggest_grantable_wish(wishlist, skill_level) {
@@ -65,7 +65,7 @@ function n_biggest_grantable_wishes(wishlist, skill_level, n) {
 
 n_biggest_grantable_wishes(wishlist, 3, 2);
 
-/* function get_happiness(wish) {
+function get_happiness(wish) {
     if (equal(wish, pair("c", 3))) {
         return 1;
     }
@@ -79,7 +79,7 @@ n_biggest_grantable_wishes(wishlist, 3, 2);
         return 4;
     }
 }
-*/
+
 
 // Level 4a
 function sum_happiness(wishlist) {
@@ -110,6 +110,12 @@ function maximise_happiness(wishlist, limit) {
         else {
             return rest_maximum_list;
         }
+    }
+}
+
+function maximise_happiness(wishlist, limit) {
+    if (is_null(wishlist)) {
+        return null;
     }
 }
 
