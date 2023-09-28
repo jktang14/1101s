@@ -51,7 +51,7 @@ function n_biggest_grantable_wishes(wishlist, skill_level, n) {
                 return tail(lst);
             }
             else {
-                return pair(head(list), eliminate(pair, tail(lst)));
+                return pair(head(lst), eliminate(pair, tail(lst)));
             }
         }
     }
