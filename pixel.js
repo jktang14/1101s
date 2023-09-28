@@ -87,7 +87,7 @@ function sum_happiness(wishlist) {
 }
 
 // Level 4b
-function maximise_happiness(wishlist, limit) {
+/* function maximise_happiness(wishlist, limit) {
     // list of wishes
     function calculate_difficulty(lst) {
         return accumulate((x, y) => tail(x) + y, 0, lst);
@@ -111,7 +111,7 @@ function maximise_happiness(wishlist, limit) {
             return rest_maximum_list;
         }
     }
-}
+} */
 
 function maximise_happiness(wishlist, limit) {
     function calculate_difficulty(lst) {
