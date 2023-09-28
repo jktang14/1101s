@@ -72,7 +72,18 @@ function sum_happiness(wishlist) {
 
 // Level 4b
 function maximise_happiness(wishlist, limit) {
-    
+    // list of wishes
+    function calculate_difficulty(lst) {
+        return accumulate((x, y) => tail(x) + y, 0, lst);
+    }
+    if (is_null(wishlist)) {
+        return null;
+    }
+    else {
+        const rest_maximum_list = maximise_happiness(tail(wishlist), limit)
+        const head_score = tail(head(wishlist));
+        if (calculate_difficulty(rest_maximum_list) + head_score <= limit)
+    }
 }
 
 
