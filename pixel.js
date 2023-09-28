@@ -41,17 +41,16 @@ function biggest_grantable_wish(wishlist, skill_level) {
 biggest_grantable_wish(wishlist, 2);
 
 function n_biggest_grantable_wishes(wishlist, skill_level, n) {
-    function eliminate(pair, lst) {
-        display(pair);
+    function eliminate(p, lst) {
         if (is_null(lst)) {
             return null;
         }
         else {
-            if (equal(head(lst), pair)) {
+            if (equal(head(lst), p)) {
                 return tail(lst);
             }
             else {
-                return pair(head(lst), eliminate(pair, tail(lst)));
+                return pair(head(lst), eliminate(p, tail(lst)));
             }
         }
     }
@@ -60,7 +59,6 @@ function n_biggest_grantable_wishes(wishlist, skill_level, n) {
     }
     else {
         const biggest_wish = biggest_grantable_wish(wishlist, skill_level);
-        display(eliminate(biggest_wish, wishlist));
         return pair(biggest_wish, n_biggest_grantable_wishes(eliminate(biggest_wish, wishlist), skill_level, n - 1));
     }
 }
