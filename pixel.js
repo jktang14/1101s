@@ -66,13 +66,13 @@ function n_biggest_grantable_wishes(wishlist, skill_level, n) {
 n_biggest_grantable_wishes(wishlist, 3, 2);
 
 function get_happiness(wish) {
-    if equal(wish, pair("c", 3)) {
+    if (equal(wish, pair("c", 3))) {
         return 1;
     }
-    else if equal(wish, pair("a", 1)) {
+    else if (equal(wish, pair("a", 1))) {
         return 2;
     }
-    else if equal(wish, pair("b", 2)) {
+    else if (equal(wish, pair("b", 2))) {
         return 3;
     }
     else {
