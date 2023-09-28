@@ -117,6 +117,13 @@ function maximise_happiness(wishlist, limit) {
     if (is_null(wishlist)) {
         return null;
     }
+    else {
+        const head_score = tail(head(wishlist));
+        // case 1: Head is included
+        const list_with_head = maximise_happiness(wishlist, limit - head_score);
+        // case 2: Head not included
+        const list_without_head = maximise_happiness(tail(wishlist), limit)
+    }
 }
 
 
