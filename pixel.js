@@ -60,7 +60,7 @@ function n_biggest_grantable_wishes(wishlist, skill_level, n) {
     }
     else {
         const biggest_wish = biggest_grantable_wish(wishlist, skill_level);
-        display(biggest_wish);
+        display(eliminate(biggest_wish, wishlist));
         return pair(biggest_wish, n_biggest_grantable_wishes(eliminate(biggest_wish, wishlist), skill_level, n - 1));
     }
 }
