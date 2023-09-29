@@ -113,13 +113,10 @@ function sum_happiness(wishlist) {
 } */
 
 function maximise_happiness(wishlist, limit) {
-    function calculate_difficulty(lst) {
-        return accumulate((x, y) => tail(x) + y, 0, lst);
-    }
     if (is_null(wishlist)) {
         return null;
     }
-    else if (limit === 0 || limit < 0) {
+    else if (limit < 0) {
         return null;
     }
     else {
