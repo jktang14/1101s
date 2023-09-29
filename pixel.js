@@ -119,7 +119,7 @@ function maximise_happiness(wishlist, limit) {
     if (is_null(wishlist)) {
         return null;
     }
-    else if (limit === 0) {
+    else if (limit === 0 || limit < 0) {
         return null;
     }
     else {
