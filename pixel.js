@@ -125,11 +125,12 @@ function maximise_happiness(wishlist, limit) {
     else {
         const head_score = tail(head(wishlist));
         // case 1: Head is included
+        const list_with_head;
         if (head_score > limit) {
-            const list_with_head = null;
+            list_with_head = null;
         }
         else {
-            const list_with_head = pair(head(wishlist), maximise_happiness(wishlist, limit - head_score));
+            list_with_head = pair(head(wishlist), maximise_happiness(wishlist, limit - head_score));
         }
         const head_happiness = sum_happiness(list_with_head);
         // case 2: Head not included
