@@ -133,7 +133,7 @@ function maximise_happiness(wishlist, limit) {
     }
 }
 
-const wishlist = list(pair("c", 3), pair("b", 2), pair("a", 1), pair("d", 4));
+const wishlist = list(pair("b", 2), pair("a", 1), pair("d", 4), pair("c", 3));
 maximise_happiness(wishlist, 6);
 
 
