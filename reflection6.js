@@ -53,6 +53,9 @@ function middle(n) {
 // put the first n elements of xs into a list
 function take(xs, n) {
     // to be completed
+    return n === 0
+        ? null
+        : pair(head(xs), take(tail(xs), n - 1));
 }
 
 // drop the first n elements from the list and return the rest
