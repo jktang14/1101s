@@ -61,6 +61,9 @@ function take(xs, n) {
 // drop the first n elements from the list and return the rest
 function drop(xs, n) {
     // to be completed
+    return n === 0
+        ? xs
+        : drop(tail(xs), n - 1);
 }
 
 // merge two sorted lists into one sorted list
