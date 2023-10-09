@@ -4,9 +4,9 @@
 //(1 + 2) + (3 + 4) + (5 + 6);
 
 // q2
-const c = 1;
+/* const c = 1;
 let x = c + 2;
 const d = c + x;
 let y = 3;
 x = c;
-y = d;
+y = d; */
