@@ -37,7 +37,9 @@ let commission = 25; // my commission in dollars
 // total price = (commission + cost) * (1 + tax_rate)
 
 function make_price_calculator(tax_rate) {
+    display(commission);
     function calculator(cost) {
+        display(commission);
         return (commission + cost) * (1 + tax_rate);
     }
     return calculator;
@@ -46,4 +48,11 @@ function make_price_calculator(tax_rate) {
 const calc = make_price_calculator(0.07);
 commission = 125;
 display(calc(75));
+
+// q3
+function curry(f) {
+    return x => y => f(x, y);
+}
+
+(curry(math_pow))(3)(4);
 
