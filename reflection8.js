@@ -45,5 +45,5 @@ function make_price_calculator(tax_rate) {
 
 const calc = make_price_calculator(0.07);
 commission = 125;
-calc(75);
+display(calc(75));
 
