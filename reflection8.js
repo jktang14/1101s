@@ -23,7 +23,10 @@ function make_withdraw(balance, password) {
 
 const W1 = make_withdraw(100, "hi");
 display(W1(40, "good"));
+display(W1(5, "hi"));
 display(W1(10, "good"));
 display(W1(20, "good"));
 display(W1(10, "good"));
+display(W1(5, "good"));
+
 
