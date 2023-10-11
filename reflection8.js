@@ -1,3 +1,4 @@
+// q1
 function make_withdraw(balance, password) {
     let counter = 0;
     function withdraw(amount, p) {
