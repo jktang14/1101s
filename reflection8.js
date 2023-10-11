@@ -1,5 +1,5 @@
 // q1
-function make_withdraw(balance, password) {
+/*function make_withdraw(balance, password) {
     let counter = 0;
     function withdraw(amount, p) {
         if (p === password && counter < 3) {
@@ -29,7 +29,7 @@ display(W1(10, "good"));
 display(W1(20, "good"));
 display(W1(10, "good"));
 display(W1(5, "good"));
-
+*/
 // q2
 let commission = 25; // my commission in dollars
 
