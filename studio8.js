@@ -25,4 +25,4 @@ function d_filter(pred, xs) {
 
 const L = list(1, 2, 3, 4, 5, 6, 7, 8, 9, 11);
 d_filter(x => x % 2 === 0, L); // returns [2, [4, [6, [8, null]]]]
-//L; // What is L now?
+L; // What is L now?
