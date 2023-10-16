@@ -8,3 +8,6 @@ change(x, 1);
 x;
 
 // q2
+function d_filter(pred, xs) {
+    
+}
