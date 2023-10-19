@@ -36,7 +36,7 @@ function fib(n) {
     for (let i = 2; i <= n; i = i + 1) {
         arr[i] = arr[i - 1] + arr[i - 2];
     }
-    return arr[array_length(arr) - 1];
+    return arr[n];
 }
 
 fib(3);
