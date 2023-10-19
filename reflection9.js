@@ -20,6 +20,7 @@ my_search(14); // returns true
 // ...
 my_search(30); // returns false
 
+// Use of binary search, so must sort first
 function make_optimized_search()
 
 // q2 a 
