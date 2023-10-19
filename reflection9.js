@@ -22,11 +22,10 @@ my_search(30); // returns false
 
 // Use of binary search, so must sort first
 function make_optimized_search(A) {
+    // To make a copy of the array, only choice is to use a loop and manually copy each element
     merge_sort(A);
     return x => binary_search(A, x);
 }
-    
-    
 
 // q2 a 
 function fib(n) {
