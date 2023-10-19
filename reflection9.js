@@ -21,8 +21,10 @@ my_search(14); // returns true
 my_search(30); // returns false
 
 // Use of binary search, so must sort first
-function make_optimized_search()
-
+function make_optimized_search(A)
+    merge_sort(A);
+    return x => binary_search(A, x);
+    
 // q2 a 
 function fib(n) {
     let arr = [0, 1];
