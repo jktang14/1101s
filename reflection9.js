@@ -27,6 +27,9 @@ function make_optimized_search(A) {
     return x => binary_search(A, x);
 }
 
+// So we are only sorting the list just once, so time: 
+// n log n (time complexity of merge_sort) + n searches * log n time for each binary search
+
 // q2 a 
 function fib(n) {
     let arr = [0, 1];
