@@ -20,7 +20,7 @@ my_search(14); // returns true
 // ...
 my_search(30); // returns false
 
-//function make_optimized_search()
+function make_optimized_search()
 
 // q2 a 
 function fib(n) {
