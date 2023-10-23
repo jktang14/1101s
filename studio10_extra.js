@@ -8,7 +8,7 @@ function rotate_matrix(M) {
     const len = array_length(M);
     for (let i = 0; i < len; i = i + 1) {
         for (let j = i + 1; j < len; j = j + 1) {
-            swap(M, j, i);
+            swap(M, i, j, j, i);
         }
     }
     // reverse each row
@@ -16,7 +16,7 @@ function rotate_matrix(M) {
     const midpoint = math_floor(len / 2);
     for (let i = 0; i < len; i = i + 1) {
         for (let j = 0; j < midpoint; j = j + 1) {
-            swap(M, j, len - 1 - j);
+            swap(M, i, j, i, len - 1 - j);
         }
     }
     return M;
