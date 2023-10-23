@@ -1,4 +1,4 @@
-function swap(A, i, j) {
+/*function swap(A, i, j) {
     let temp = A[i];
     A[i] = A[j];
     A[j] = temp;
@@ -17,7 +17,7 @@ function reverse_array(A) {
 
 const arr = [1, 2, 3, 4, 5];
 reverse_array(arr);
-arr;
+arr; */
 
 // q2 a
 // theta (n^2)
@@ -29,7 +29,7 @@ function bubblesort_list(lst) {
         for (let j = 0; j < i; j = j + 1) {
             const first = list_ref(lst, j);
             const second = list_ref(lst, j + 1);
-            if (first < second) {
+            if (first > second) {
                 set_head(member(second, lst), first);
                 set_head(lst, second);
             }
@@ -37,6 +37,5 @@ function bubblesort_list(lst) {
     }
 }
 const LL = list(3, 5, 2, 4, 1);
-// 1 2 4 5
 bubblesort_list(LL);
 LL; // should show [1, [2, [3, [4, [5, null]]]]]
