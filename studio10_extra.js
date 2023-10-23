@@ -7,11 +7,15 @@ function rotate_matrix(M) {
     }
     const len = array_length(M);
     for (let i = 0; i < len; i = i + 1) {
-        for (let j = 1; j < len; j = j + 1) {
+        for (let j = i + 1; j < len; j = j + 1) {
             swap(M, j, i);
         }
     }
-    display(M);
+    // reverse each row
+    midpoint = math_floor(len / 2);
+    for (let i = 0; i < midpoint; i = i + 1) {
+        
+    }
 }
 
 rotate_matrix(
