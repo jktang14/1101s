@@ -31,8 +31,7 @@ function bubblesort_list(lst) {
             const second = list_ref(lst, j + 1);
             if (first < second) {
                 set_head(member(second, lst), first);
-                set_head(lst, list_ref(lst, j + 1));
-                
+                set_head(lst, second);
             }
         }
     }
