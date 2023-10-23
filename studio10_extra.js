@@ -1,9 +1,9 @@
 function rotate_matrix(M) {
     // 10
-    function swap(M, row, column) {
-        const temp = M[column][row];
-        M[column][row] = M[row][column];
-        M[row][column] = temp;
+    function swap(M, r1, c1, r2, c2) {
+        const temp = M[r1][c1];
+        M[r1][c1] = M[r2][c2];
+        M[r2][c2] = temp;
     }
     const len = array_length(M);
     for (let i = 0; i < len; i = i + 1) {
@@ -12,10 +12,14 @@ function rotate_matrix(M) {
         }
     }
     // reverse each row
-    midpoint = math_floor(len / 2);
-    for (let i = 0; i < midpoint; i = i + 1) {
-        
+    display(M);
+    const midpoint = math_floor(len / 2);
+    for (let i = 0; i < len; i = i + 1) {
+        for (let j = 0; j < midpoint; j = j + 1) {
+            swap(M, j, len - 1 - j);
+        }
     }
+    return M;
 }
 
 rotate_matrix(
