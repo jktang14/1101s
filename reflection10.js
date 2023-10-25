@@ -43,12 +43,12 @@ const ones = pair(1, () => ones);
 
 
 // q1
-const x = stream_map(display, enum_stream(0, 10));
+//const x = stream_map(display, enum_stream(0, 10));
 //0 1 2 3
-stream_ref(x, 3);
+//stream_ref(x, 3);
 // 0 1 2 3 4 5
 // why it dont start from 0?
-stream_ref(x, 5);
+//stream_ref(x, 5);
 
 function stream_map_optimized(f, s) {
     return is_null(s)
@@ -56,4 +56,20 @@ function stream_map_optimized(f, s) {
         : pair(f(head(s)),
             memo_fun( () => stream_map_optimized(
                     f, stream_tail(s)) ));
+}
+const z = stream_map_optimized(display, enum_stream(0, 10));
+// 0 1 2 3 4 5
+stream_ref(z, 3);
+stream_ref(z, 5);
+
+// q2
+function zip_list_of_streams(lst) {
+    function helper(lst) {
+        if (is_null(tail(lst))) {
+            return head(lst);
+        }
+        else {
+            stream_append(list_to_stream(map(x => head(x), lst)), helper(map(x => stream_tail(x), lst)));
+        }
+    }
 }
