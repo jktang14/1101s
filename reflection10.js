@@ -44,5 +44,16 @@ const ones = pair(1, () => ones);
 
 // q1
 const x = stream_map(display, enum_stream(0, 10));
+//0 1 2 3
 stream_ref(x, 3);
+// 0 1 2 3 4 5
+// why it dont start from 0?
 stream_ref(x, 5);
+
+function stream_map_optimized(f, s) {
+    return is_null(s)
+        ? null
+        : pair(f(head(s)),
+            memo_fun( () => stream_map_optimized(
+                    f, stream_tail(s)) ));
+}
