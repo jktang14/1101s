@@ -40,3 +40,9 @@ function scale_stream(s, f) {
 
 const integers = integers_from(1);
 const ones = pair(1, () => ones);
+
+
+// q1
+const x = stream_map(display, enum_stream(0, 10));
+stream_ref(x, 3);
+stream_ref(x, 5);
