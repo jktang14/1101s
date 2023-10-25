@@ -40,6 +40,7 @@ function scale_stream(s, f) {
 
 const integers = integers_from(1);
 const ones = pair(1, () => ones);
+ones;
 
 
 // q1
@@ -57,10 +58,10 @@ function stream_map_optimized(f, s) {
             memo_fun( () => stream_map_optimized(
                     f, stream_tail(s)) ));
 }
-const z = stream_map_optimized(display, enum_stream(0, 10));
+//const z = stream_map_optimized(display, enum_stream(0, 10));
 // 0 1 2 3 4 5
-stream_ref(z, 3);
-stream_ref(z, 5);
+//stream_ref(z, 3);
+//stream_ref(z, 5);
 
 // q2
 function zip_list_of_streams(lst) {
@@ -72,4 +73,9 @@ function zip_list_of_streams(lst) {
             stream_append(list_to_stream(map(x => head(x), lst)), helper(map(x => stream_tail(x), lst)));
         }
     }
+}
+
+// q3
+function partial_sums(strm) {
+    strm
 }
