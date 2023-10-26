@@ -45,9 +45,11 @@ ones;
 
 // q1
 //const x = stream_map(display, enum_stream(0, 10));
-//0 1 2 3
+// 0 is only produced once here because in the declaration of x, 0 would be displayed
+// now the new pair is held at pair(1, nullary)
+// 1 2 3
 //stream_ref(x, 3);
-// 0 1 2 3 4 5
+// 1 2 3 4 5
 // why it dont start from 0?
 //stream_ref(x, 5);
 
