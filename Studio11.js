@@ -23,7 +23,7 @@ eval_stream(B, 4);
 // 1 1 2 6 
 
 // q2
-function alt(n) {
+/*function alt(n) {
     if (n % 2 === 1) {
         return pair(1, () => alt(n + 1));
     }
@@ -32,5 +32,11 @@ function alt(n) {
     }
 }
 
+
 const alt_ones = alt(1);
+eval_stream(alt_ones, 6); */
+
+const alt_ones = pair(1, () => scale_stream(-1, alt_ones));
 eval_stream(alt_ones, 6);
+
+
