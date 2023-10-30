@@ -39,4 +39,14 @@ eval_stream(alt_ones, 6); */
 const alt_ones = pair(1, () => scale_stream(-1, alt_ones));
 eval_stream(alt_ones, 6);
 
+function add_streams(s1, s2) {
+    return is_null(s1)
+        ? s2
+        : is_null(s2)
+        ? s1
+        : pair(head(s1) + head(s2), () => add_streams(stream_tail(s1), stream_tail(s2)));
+}
+
+const zeros = add_streams(alt_ones, stream_tail(alt_ones));
+eval_stream(zeros, 5);
 
