@@ -182,7 +182,7 @@ function apply_binary(operator, op1, op2) {
            : operator === "/" 
            ? op1 / op2
            : operator === "%" 
-           ? op1 % op2
+           ? op1 % op2 // Change to math_sqrt(op1 * op1 + op2 * op2)?
            : operator === "<" 
            ? op1 < op2
            : operator === ">" 
