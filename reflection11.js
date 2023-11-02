@@ -682,7 +682,7 @@ function parse_and_evaluate(string) {
 
 //parse_and_evaluate("undefined;");
 
-//parse_and_evaluate("'hello';");
+// parse_and_evaluate("'hello';");
 
 //parse_and_evaluate("1 + 2;");
 
@@ -705,6 +705,8 @@ function parse_and_evaluate(string) {
 //parse_and_evaluate("const x = 1; { const x = 2; x; } x;");
 
 //parse_and_evaluate("math_pow(2, 3);");
+
+parse_and_evaluate("false && 0();");
 
 /*
 parse_and_evaluate(`
