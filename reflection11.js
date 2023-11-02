@@ -182,7 +182,7 @@ function apply_binary(operator, op1, op2) {
            : operator === "/" 
            ? op1 / op2
            : operator === "%" 
-           ? op1 % op2 // Change to math_sqrt(op1 * op1 + op2 * op2)?
+           ? op1 % op2 // Change to math_hypot(op1, op2);
            : operator === "<" 
            ? op1 < op2
            : operator === ">" 
@@ -706,7 +706,7 @@ function parse_and_evaluate(string) {
 
 //parse_and_evaluate("math_pow(2, 3);");
 
-parse_and_evaluate("false && 0();");
+// parse_and_evaluate("false && 0();");
 
 /*
 parse_and_evaluate(`
