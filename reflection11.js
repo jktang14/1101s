@@ -706,7 +706,8 @@ function parse_and_evaluate(string) {
 
 //parse_and_evaluate("math_pow(2, 3);");
 
-// parse_and_evaluate("false && 0();");
+// the type identified is logical composition from the error message
+//parse_and_evaluate("false && 0();");
 
 /*
 parse_and_evaluate(`
