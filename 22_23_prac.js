@@ -139,26 +139,32 @@ function make_NiFT(T) {
 // returns list( 6, 8, 9, list(1, 2, 5, list(3, 4)), null, list(7),
 // list( 11, list(10), list(12, 13, list(14, 15)) ) )
 
-function make_SToN(T) {
-    
+function insert(x, xs) {
+    return is_null(xs)
+    ? list(x)
+    : x <= head(xs)
+    ? pair(x, xs)
+    : pair(head(xs), insert(x, tail(xs)));
+}
+function insertion_sort(xs) {
+    return is_null(xs)
+    ? xs
+    : insert(head(xs), insertion_sort(tail(xs)));
+}
+function map_tree(fun, tree) {
+    return map(sub_tree =>
+    !is_list(sub_tree)
+    ? fun(sub_tree)
+    : map_tree(fun, sub_tree),
+    tree);
 }
 
 
 
+function make_SToN(T) {
+    let flattened = accumulate((x, y) => is_pair(x) ? append(x,y) : append(list(x), y), null, T);
+    return display_list(flattened);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const tree1 = list(list(4, 4, 1), 5, 2, list(8, null, 9), 4, list(6, 7), 3);
+make_SToN(tree1);
