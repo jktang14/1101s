@@ -106,8 +106,8 @@ function subseq_replace(new_sub, old_sub, seq) {
     return new_lst;
 }
 
-subseq_replace(list("x"), list("a", "b", "a"),
-list("a", "b", "a", "b", "a", "b", "a"));
+//subseq_replace(list("x"), list("a", "b", "a"),
+//list("a", "b", "a", "b", "a", "b", "a"));
 // returns list("x", "b", "x")
 //subseq_replace(list("x", "y", "z"), list("a", "b"),
 //list("a", "b", "c", "d", "e", "a", "b"));
@@ -116,7 +116,28 @@ list("a", "b", "a", "b", "a", "b", "a"));
 //list("a", "b", "a", "b", "a", "b", "a"));
 // returns list("a", "b", "a", "b", "a", "b", "a")
 
+function make_NiFT(T) {
+    let tree = null;
+    let number_lst = null;
+    for (let lst = T; !is_null(lst); lst = tail(lst)) {
+        if (is_number(head(lst))) {
+            number_lst = append(number_lst, list(head(lst)));
+        }
+        else {
+            tree = append(tree, list(make_NiFT(head(lst))));
+        }
+    }
+    return append(number_lst, tree);
+}
 
+const tree1 = list( list(4,4,1), 5, 2, list(8,9), 4, list(6,7), 3 );
+display_list(make_NiFT(tree1));
+// returns list( 5, 2, 4, 3, list(4,4,1), list(8,9), list(6,7) )
+//const tree2 = list( list(1, 2, list(3, 4), 5), 6, null, list(7), 8, 9,
+//list( list(10), 11, list(12, 13, list(14, 15)) ) );
+//display_list(make_NiFT(tree2));
+// returns list( 6, 8, 9, list(1, 2, 5, list(3, 4)), null, list(7),
+// list( 11, list(10), list(12, 13, list(14, 15)) ) )
 
 
 
