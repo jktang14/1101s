@@ -52,7 +52,34 @@ function remove_subseq(L, start_pos, end_pos) {
 //remove_subseq( list(10), 0, 0 );
 // returns null
 
+function is_prefix_of(subseq, seq) {
+    if (length(subseq) > length(seq)) {
+        return false;
+    }
+    for (let lst = subseq; !is_null(lst); lst = tail(lst)) {
+        if (head(lst) !== head(seq)) {
+            return false;
+        }
+        seq = tail(seq);
+    }
+    return true;
+}
 
+//is_prefix_of(list("a", "b", "c"),
+//list("a", "b", "c", "d", "e"));
+// returns true
+//is_prefix_of(list("b", "c"),
+//list("a", "b", "c", "d", "e"));
+// returns false
+//is_prefix_of(list("a", "b", "c"), list("a", "b", "c"));
+// returns true
+//is_prefix_of(list("a", "b", "c"),
+//list("a", "b"));
+// returns false
+//is_prefix_of(list(), list("a", "b", "c"));
+// returns true
+//is_prefix_of(list(), list());
+// returns true
 
 
 
