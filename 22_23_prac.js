@@ -141,10 +141,10 @@ function make_NiFT(T) {
 
 function insert(x, xs) {
     return is_null(xs)
-    ? list(x)
-    : x <= head(xs)
-    ? pair(x, xs)
-    : pair(head(xs), insert(x, tail(xs)));
+           ? list(x)
+           : x <= head(xs)
+           ? pair(x, xs)
+           : pair(head(xs), insert(x, tail(xs)));
 }
 function insertion_sort(xs) {
     return is_null(xs)
@@ -159,11 +159,18 @@ function map_tree(fun, tree) {
     tree);
 }
 
-
+function flatten(T) {
+    return accumulate((x, y) => is_list(x) ? append(flatten(x),y) : append(list(x), y), null, T);
+}
 
 function make_SToN(T) {
-    let flattened = accumulate((x, y) => is_pair(x) ? append(x,y) : append(list(x), y), null, T);
-    return display_list(flattened);
+    let sorted = insertion_sort(flatten(T));
+    function helper(subtree) {
+        const h = head(sorted);
+        sorted = tail(sorted);
+        return h;
+    }
+    return map_tree(helper, T);
 }
 
 const tree1 = list(list(4, 4, 1), 5, 2, list(8, null, 9), 4, list(6, 7), 3);
