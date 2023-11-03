@@ -175,3 +175,34 @@ function make_SToN(T) {
 
 const tree1 = list(list(4, 4, 1), 5, 2, list(8, null, 9), 4, list(6, 7), 3);
 make_SToN(tree1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
