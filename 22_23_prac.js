@@ -81,7 +81,20 @@ function is_prefix_of(subseq, seq) {
 //is_prefix_of(list(), list());
 // returns true
 
+function tail_n_times(xs, n) {
+return is_null(xs)
+? null
+: n <= 0
+? xs
+: tail_n_times(tail(xs), n - 1);
+}
 
+function subseq_replace(new_sub, old_sub, seq) {
+    let front_lst = null;
+    for (let lst = seq; !is_null(lst); lst = tail(lst)) {
+        if (!is_prefix_of())
+    }
+}
 
 
 
