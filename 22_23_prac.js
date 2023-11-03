@@ -90,11 +90,31 @@ return is_null(xs)
 }
 
 function subseq_replace(new_sub, old_sub, seq) {
-    let front_lst = null;
-    for (let lst = seq; !is_null(lst); lst = tail(lst)) {
-        if (!is_prefix_of())
+    let len = length(seq);
+    let new_lst = null;
+    while(!is_null(seq)) {
+        if (is_prefix_of(old_sub, seq)) {
+            const len2 = length(old_sub);
+            seq = tail_n_times(seq, len2);
+            new_lst = append(new_lst, new_sub);
+        }
+        else {
+            new_lst = append(new_lst, list(head(seq)));
+            seq = tail(seq);
+        }
     }
+    return new_lst;
 }
+
+subseq_replace(list("x"), list("a", "b", "a"),
+list("a", "b", "a", "b", "a", "b", "a"));
+// returns list("x", "b", "x")
+//subseq_replace(list("x", "y", "z"), list("a", "b"),
+//list("a", "b", "c", "d", "e", "a", "b"));
+// returns list("x", "y", "z", "c", "d", "e", "x", "y", "z")
+//subseq_replace(list("x", "y"), list("p", "q", "r"),
+//list("a", "b", "a", "b", "a", "b", "a"));
+// returns list("a", "b", "a", "b", "a", "b", "a")
 
 
 
